@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección: Mi Familia | Gramática</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header><h1>Lección de Español A1-A2</h1></header>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">🏠 Inicio</a></li>
+            <li><a href="vocabulario.html">📚 Vocabulario</a></li>
+            <li><a href="gramatica.html" class="active">💡 Gramática</a></li>
+            <li><a href="ejemplo.html">🖼️ Ejemplo</a></li>
+            <li><a href="ejercicios.html">✍️ Ejercicios</a></li>
+        </ul>
+    </nav>
+    <main class="container">
+        <section class="card">
+            <h2>💡 Gramática Esencial para Describir</h2>
+            
+            <h3>Verbos <code>ser</code> y <code>tener</code></h3>
+            <p>Usamos <strong>SER</strong> para el nombre, la nacionalidad y la profesión. Usamos <strong>TENER</strong> para la edad.</p>
+
+            <h3><code>Ser</code> vs. <code>Estar</code>: La diferencia básica</h3>
+            <p><ul><li><strong>SER</strong> es para descripciones permanentes. <em>Ej: Él es alto.</em></li><li><strong>ESTAR</strong> es para estados y localización. <em>Ej: Él está contento.</em></li></ul></p>
+
+            <h3><code>Mi, tu, su</code>: Los adjetivos posesivos</h3>
+            <table>
+                <tr><th>Posesivo</th><th>Significado</th><th>Ejemplo</th></tr>
+                <tr><td><strong>mi / mis</strong></td><td>my</td><td><strong>Mi</strong> padre</td></tr>
+                <tr><td><strong>tu / tus</strong></td><td>your (informal)</td><td><strong>Tu</strong> hermana</td></tr>
+                <tr><td><strong>su / sus</strong></td><td>his / her</td><td><strong>Su</strong> perro</td></tr>
+            </table>
+        </section>
+    </main>
+    <footer><p>Lección de Español Interactiva | 2025</p></footer>
+</body>
+</html>

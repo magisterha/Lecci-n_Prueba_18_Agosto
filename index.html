@@ -3,363 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lección de Español A1-A2: Mi Familia</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Lección: Mi Familia | Inicio</title>
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-
-    <style>
-        /* --- Comentarios CSS: Sección de Estilos Generales y Reset --- */
-        :root {
-            --primary-color: #007bff; /* Azul de acento */
-            --secondary-color: #f8f9fa; /* Fondo claro para las tarjetas */
-            --background-color: #e9ecef; /* Fondo general de la página */
-            --text-color: #343a40; /* Color de texto principal */
-            --border-radius: 8px;
-            --box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Lato', Arial, sans-serif;
-            line-height: 1.6;
-            background-color: var(--background-color);
-            color: var(--text-color);
-            font-size: 17px;
-        }
-
-        /* --- Comentarios CSS: Estructura Principal (Header, Main, Footer) --- */
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 2rem 1rem;
-            text-align: center;
-            border-bottom-left-radius: var(--border-radius);
-            border-bottom-right-radius: var(--border-radius);
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        main {
-            padding: 20px 0;
-        }
-
-        /* --- Comentarios CSS: Estilo de Tarjetas para las Secciones --- */
-        section {
-            background-color: white;
-            margin-bottom: 25px;
-            padding: 25px;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            transition: transform 0.2s;
-        }
-
-        section:hover {
-            transform: translateY(-5px);
-        }
-
-        section h2 {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            font-size: 1.8rem;
-        }
-
-        /* --- Comentarios CSS: Tipografía y Elementos de Texto --- */
-        h3 {
-            font-size: 1.4rem;
-            margin-top: 25px;
-            margin-bottom: 15px;
-        }
-
-        p, li {
-            margin-bottom: 10px;
-        }
-
-        strong {
-            color: var(--primary-color);
-        }
-
-        code {
-            background-color: #e9ecef;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-family: monospace;
-        }
-
-        /* --- Comentarios CSS: Estilo de Listas y Tablas --- */
-        ul {
-            list-style-type: '✓ ';
-            padding-left: 25px;
-        }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        th, td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid #dee2e6;
-        }
-        
-        th {
-            background-color: var(--secondary-color);
-        }
-
-        /* --- Comentarios CSS: Estilo para Botones y Elementos Interactivos --- */
-        .solutions-button {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: white;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-            margin-top: 20px;
-        }
-
-        .solutions-button:hover {
-            background-color: #0056b3;
-        }
-
-        /* --- Comentarios CSS: Clase para ocultar las soluciones --- */
-        #solutions-container {
-            display: none; /* Las soluciones están ocultas por defecto */
-            margin-top: 20px;
-            padding: 20px;
-            background-color: var(--secondary-color);
-            border-left: 5px solid var(--primary-color);
-            border-radius: var(--border-radius);
-        }
-        
-        #solutions-container h3 {
-            margin-top: 0;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            color: #6c757d;
-            font-size: 0.9rem;
-        }
-
-        /* --- Comentarios CSS: Media Queries para Responsividad --- */
-        @media (max-width: 768px) {
-            body {
-                font-size: 16px;
-            }
-            header h1 {
-                font-size: 2rem;
-            }
-            section {
-                padding: 20px;
-            }
-        }
-    </style>
 </head>
 <body>
-
     <header>
         <h1>Lección de Español A1-A2</h1>
         <p>Mi Familia y las Descripciones</p>
     </header>
 
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">🏠 Inicio</a></li>
+            <li><a href="vocabulario.html">📚 Vocabulario</a></li>
+            <li><a href="gramatica.html">💡 Gramática</a></li>
+            <li><a href="ejemplo.html">🖼️ Ejemplo</a></li>
+            <li><a href="ejercicios.html">✍️ Ejercicios</a></li>
+        </ul>
+    </nav>
+    
     <main class="container">
-
-        <section id="objetivos">
-            <h2>🎯 ¿Qué vamos a aprender hoy?</h2>
-            <ul>
-                <li>A nombrar a los miembros de la familia.</li>
-                <li>A describir personas (físico y carácter).</li>
-                <li>A presentar a tu familia con frases sencillas.</li>
-            </ul>
+        <section class="card">
+            <h2>🎯 Bienvenido/a a la lección</h2>
+            <p>En esta lección interactiva, aprenderás a nombrar a los miembros de tu familia, describirlos usando adjetivos básicos y a presentarlos con frases simples. ¡Vamos a empezar!</p>
+            <p>Selecciona una sección a continuación para comenzar tu aprendizaje.</p>
         </section>
 
-        <section id="vocabulario">
-            <h2>📚 Vocabulario: La Familia y los Adjetivos</h2>
-            <h3>1. Miembros de la Familia</h3>
-            <ul>
-                <li><strong>El padre</strong> – (The father)</li>
-                <li><strong>La madre</strong> – (The mother)</li>
-                <li><strong>El hermano</strong> – (The brother)</li>
-                <li><strong>La hermana</strong> – (The sister)</li>
-                <li><strong>El hijo</strong> – (The son)</li>
-                <li><strong>La hija</strong> – (The daughter)</li>
-                <li><strong>El abuelo</strong> – (The grandfather)</li>
-                <li><strong>La abuela</strong> – (The grandmother)</li>
-            </ul>
-            
-            <h3>2. Adjetivos para Describir Personas</h3>
-            <ul>
-                <li><strong>Alto / Alta</strong> – (Tall)</li>
-                <li><strong>Bajo / Baja</strong> – (Short)</li>
-                <li><strong>Joven</strong> – (Young)</li>
-                <li><strong>Mayor</strong> – (Old)</li>
-                <li><strong>Guapo / Guapa</strong> – (Handsome / Pretty)</li>
-                <li><strong>Simpático / Simpática</strong> – (Nice, friendly)</li>
-                <li><strong>Inteligente</strong> – (Intelligent)</li>
-                <li><strong>Divertido / Divertida</strong> – (Fun)</li>
-            </ul>
+        <section class="menu-grid">
+            <a href="vocabulario.html" class="menu-card">
+                <div class="menu-card-content">
+                    <h3>📚 Vocabulario</h3>
+                    <p>Aprende las palabras clave para los miembros de la familia y los adjetivos más comunes.</p>
+                </div>
+            </a>
+            <a href="gramatica.html" class="menu-card">
+                <div class="menu-card-content">
+                    <h3>💡 Gramática</h3>
+                    <p>Domina el uso de los verbos 'ser', 'estar', 'tener' y los posesivos para describir.</p>
+                </div>
+            </a>
+            <a href="ejemplo.html" class="menu-card">
+                <div class="menu-card-content">
+                    <h3>🖼️ Ejemplo</h3>
+                    <p>Lee un texto modelo para ver cómo se presenta una familia usando todo lo aprendido.</p>
+                </div>
+            </a>
+            <a href="ejercicios.html" class="menu-card">
+                <div class="menu-card-content">
+                    <h3>✍️ ¡A practicar!</h3>
+                    <p>Pon a prueba tus conocimientos con ejercicios interactivos y comprueba tus respuestas.</p>
+                </div>
+            </a>
         </section>
-        
-        <section id="gramatica">
-            <h2>💡 Gramática Esencial para Describir</h2>
-            
-            <h3>Verbos <code>ser</code> y <code>tener</code></h3>
-            <p>Usamos <strong>SER</strong> para el nombre, la nacionalidad y la profesión. Usamos <strong>TENER</strong> para la edad.</p>
-            <p>Ejemplo combinado: "Yo <strong>soy</strong> Carlos. <strong>Tengo</strong> 30 años."</p>
-
-            <h3><code>Ser</code> vs. <code>Estar</code>: La diferencia básica</h3>
-            <p>Esta es una regla simple para empezar:</p>
-            <ul>
-                <li><strong>SER</strong> es para descripciones permanentes (identidad, características).<br><em>Ejemplo: Él <strong>es</strong> alto.</em></li>
-                <li><strong>ESTAR</strong> es para estados de ánimo y localización (temporal).<br><em>Ejemplo: Él <strong>está</strong> contento. Él <strong>está</strong> en casa.</em></li>
-            </ul>
-
-            <h3><code>Mi, tu, su</code>: Los adjetivos posesivos</h3>
-            <p>Estas palabras indican de quién es algo. Añaden una "-s" para el plural.</p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Posesivo</th>
-                        <th>Significado</th>
-                        <th>Ejemplo</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>mi / mis</strong></td>
-                        <td>my</td>
-                        <td><strong>Mi</strong> padre / <strong>Mis</strong> padres</td>
-                    </tr>
-                    <tr>
-                        <td><strong>tu / tus</strong></td>
-                        <td>your (informal)</td>
-                        <td><strong>Tu</strong> hermana / <strong>Tus</strong> hermanas</td>
-                    </tr>
-                    <tr>
-                        <td><strong>su / sus</strong></td>
-                        <td>his / her / your (formal)</td>
-                        <td><strong>Su</strong> perro / <strong>Sus</strong> perros</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-        
-        <section id="ejemplo">
-            <h2>🖼️ Ejemplo: Presentando a mi familia</h2>
-            <p>Hola, ¡mira! Esta es <strong>mi</strong> familia.</p>
-            <p><strong>Mi</strong> madre se llama Elena. Ella <strong>es</strong> muy simpática y amable. <strong>Tiene</strong> el pelo rubio. A su lado <strong>está</strong> <strong>mi</strong> padre, Carlos. Él <strong>es</strong> alto y un poco serio. <strong>Tiene</strong> 48 años.</p>
-            <p>Este es <strong>mi</strong> hermano mayor, David. Él <strong>es</strong> muy inteligente. Y esta es <strong>mi</strong> hermana pequeña, Lucía. Ella <strong>es</strong> muy divertida y un poco baja. <strong>Sus</strong> amigos dicen que es muy sociable.</p>
-            <p>¡Y ese soy yo! Estoy muy contento en esta foto. ¡Amo a <strong>mi</strong> familia!</p>
-        </section>
-        
-        <section id="ejercicios">
-            <h2>✍️ ¡A practicar!</h2>
-            
-            <h3>Ejercicio 1: Completar</h3>
-            <p><em>Completa los espacios con la forma correcta del presente de los verbos <code>ser</code>, <code>estar</code> o <code>tener</code>.</em></p>
-            <ol>
-                <li>Yo _______ una hermana y dos hermanos.</li>
-                <li>Mi abuela _______ 80 años, pero _______ muy activa.</li>
-                <li>¿Tú _______ de España?</li>
-                <li>Mi padre no _______ en casa ahora, _______ en el trabajo.</li>
-                <li>Nosotros _______ muy contentos con la lección de español.</li>
-            </ol>
-            
-            <h3>Ejercicio 2: Relacionar</h3>
-            <p><em>Une la persona con el posesivo correcto.</em></p>
-            <ul>
-                <li>1. Yo → <strong>?</strong></li>
-                <li>2. Mi hermano (él) → <strong>?</strong></li>
-                <li>3. Tú → <strong>?</strong></li>
-            </ul>
-            <p><strong>Opciones:</strong> A. Tu / Tus, B. Mi / Mis, C. Su / Sus</p>
-            
-            <h3>Ejercicio 3: Construir frases</h3>
-            <p><em>Ordena las siguientes palabras para formar frases con sentido.</em></p>
-            <ol>
-                <li>alto / es / hermano / mi → __________________________________.</li>
-                <li>profesora / es / madre / tu / ? → ¿__________________________________?</li>
-                <li>tienen / mis / pelo / abuelos / blanco → __________________________________.</li>
-            </ol>
-            
-            <button id="toggle-solutions-btn" class="solutions-button">Ver Soluciones</button>
-            
-            <div id="solutions-container">
-                <h3>✅ Soluciones</h3>
-                
-                <h4>Ejercicio 1:</h4>
-                <ol>
-                    <li>tengo</li>
-                    <li>tiene / es</li>
-                    <li>eres</li>
-                    <li>está / está</li>
-                    <li>estamos</li>
-                </ol>
-                
-                <h4>Ejercicio 2:</h4>
-                <p>1 → B, 2 → C, 3 → A</p>
-                
-                <h4>Ejercicio 3:</h4>
-                <ol>
-                    <li>Mi hermano es alto.</li>
-                    <li>¿Tu madre es profesora?</li>
-                    <li>Mis abuelos tienen el pelo blanco.</li>
-                </ol>
-            </div>
-        </section>
-
     </main>
     
     <footer>
-        <p>Lección de Español Interactiva | Creado en 2025</p>
+        <p>Lección de Español Interactiva | 2025</p>
     </footer>
-
-    <script>
-        // --- Comentario JS: Lógica para el botón de mostrar/ocultar soluciones ---
-
-        // 1. Seleccionar los elementos del DOM que necesitamos: el botón y el contenedor de soluciones.
-        const toggleButton = document.getElementById('toggle-solutions-btn');
-        const solutionsContainer = document.getElementById('solutions-container');
-
-        // 2. Añadir un "event listener" que se active cuando el usuario haga clic en el botón.
-        toggleButton.addEventListener('click', () => {
-            // 3. Comprobar el estado actual del contenedor de soluciones.
-            const isVisible = solutionsContainer.style.display === 'block';
-
-            // 4. Lógica de "toggle": si está visible, lo ocultamos. Si está oculto, lo mostramos.
-            if (isVisible) {
-                solutionsContainer.style.display = 'none';
-                toggleButton.textContent = 'Ver Soluciones'; // Cambiar el texto del botón
-            } else {
-                solutionsContainer.style.display = 'block';
-                toggleButton.textContent = 'Ocultar Soluciones'; // Cambiar el texto del botón
-            }
-        });
-    </script>
-
 </body>
 </html>

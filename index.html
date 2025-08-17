@@ -3,25 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lección: Mi Familia | Vocabulario</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Lección de Español A1-A2: Mi Familia</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- Estilos Generales --- */
+        :root {
+            --primary-color: #007bff;
+            --background-color: #f4f7f9;
+            --text-color: #333;
+            --card-bg: #ffffff;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Lato', Arial, sans-serif;
+            line-height: 1.6;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-size: 17px;
+        }
+
+        /* --- Estructura Principal --- */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            border-bottom-left-radius: var(--border-radius);
+            border-bottom-right-radius: var(--border-radius);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        main {
+            padding: 20px 0;
+        }
+
+        /* --- Estilo de Tarjetas para las Secciones --- */
+        section {
+            background-color: var(--card-bg);
+            margin-bottom: 25px;
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+        section h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        /* --- Tipografía y Elementos --- */
+        h3 {
+            font-size: 1.4rem;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style-position: inside;
+            padding-left: 10px;
+        }
+
+        code {
+            background-color: #e9ecef;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        /* --- Elementos Interactivos --- */
+        .solutions-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .solutions-button:hover {
+            background-color: #0056b3;
+        }
+
+        #solutions-container {
+            display: none; /* Oculto por defecto */
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-left: 5px solid var(--primary-color);
+            border-radius: var(--border-radius);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
-    <header><h1>Lección de Español A1-A2</h1></header>
-    
-    <nav>
-        <ul class="nav-links">
-            <li><a href="index.html">🏠 Inicio</a></li>
-            <li><a href="PaginadeVocabulario.html" class="active">📚 Vocabulario</a></li>
-            <li><a href="PaginadeGramatica.html">💡 Gramática</a></li>
-            <li><a href="PaginadeEjemplo.html">🖼️ Ejemplo</a></li>
-            <li><a href="PaginadeEjercicios.html">✍️ Ejercicios</a></li>
-        </ul>
-    </nav>
+
+    <header>
+        <h1>Lección de Español A1-A2</h1>
+        <p>Mi Familia y las Descripciones</p>
+    </header>
 
     <main class="container">
-        <section class="card">
+
+        <section id="objetivos">
+            <h2>🎯 ¿Qué vamos a aprender hoy?</h2>
+            <ul>
+                <li>A nombrar a los miembros de la familia.</li>
+                <li>A describir personas (físico y carácter).</li>
+                <li>A presentar a tu familia con frases sencillas.</li>
+            </ul>
+        </section>
+
+        <section id="vocabulario">
             <h2>📚 Vocabulario: La Familia y los Adjetivos</h2>
             <h3>1. Miembros de la Familia</h3>
             <ul>
@@ -29,8 +167,6 @@
                 <li><strong>La madre</strong> – (The mother)</li>
                 <li><strong>El hermano</strong> – (The brother)</li>
                 <li><strong>La hermana</strong> – (The sister)</li>
-                <li><strong>El hijo</strong> – (The son)</li>
-                <li><strong>La hija</strong> – (The daughter)</li>
                 <li><strong>El abuelo</strong> – (The grandfather)</li>
                 <li><strong>La abuela</strong> – (The grandmother)</li>
             </ul>
@@ -40,14 +176,77 @@
                 <li><strong>Alto / Alta</strong> – (Tall)</li>
                 <li><strong>Bajo / Baja</strong> – (Short)</li>
                 <li><strong>Joven</strong> – (Young)</li>
-                <li><strong>Mayor</strong> – (Old)</li>
-                <li><strong>Guapo / Guapa</strong> – (Handsome / Pretty)</li>
                 <li><strong>Simpático / Simpática</strong> – (Nice, friendly)</li>
                 <li><strong>Inteligente</strong> – (Intelligent)</li>
                 <li><strong>Divertido / Divertida</strong> – (Fun)</li>
             </ul>
         </section>
+        
+        <section id="gramatica">
+            <h2>💡 Gramática Esencial</h2>
+            <h3>Verbos <code>ser</code> y <code>tener</code></h3>
+            <p>Usamos <strong>SER</strong> para el nombre, la nacionalidad y la profesión. Usamos <strong>TENER</strong> para la edad.</p>
+
+            <h3><code>Ser</code> vs. <code>Estar</code></h3>
+            <p><strong>SER</strong> es para descripciones permanentes (<em>él es alto</em>). <strong>ESTAR</strong> es para estados de ánimo y localización (<em>él está contento, él está en casa</em>).</p>
+
+            <h3><code>Mi, tu, su</code>: Adjetivos Posesivos</h3>
+            <p>Indican de quién es algo. Por ejemplo: "<strong>Mi</strong> padre", "<strong>Tu</strong> hermana", "<strong>Su</strong> perro".</p>
+        </section>
+        
+        <section id="ejemplo">
+            <h2>🖼️ Ejemplo: Presentando a mi familia</h2>
+            <p>Hola, esta es <strong>mi</strong> familia. <strong>Mi</strong> madre se llama Elena. Ella <strong>es</strong> profesora y <strong>es</strong> muy simpática. A su lado <strong>está</strong> <strong>mi</strong> padre, Carlos. Él <strong>es</strong> alto y <strong>tiene</strong> 48 años.</p>
+        </section>
+        
+        <section id="ejercicios">
+            <h2>✍️ ¡A practicar!</h2>
+            
+            <h3>Ejercicio 1: Completar</h3>
+            <ol>
+                <li>Yo _______ una hermana.</li>
+                <li>Mi abuela _______ 80 años.</li>
+                <li>¿Tú _______ de España?</li>
+                <li>Mi padre no _______ en casa ahora.</li>
+            </ol>
+            
+            <h3>Ejercicio 2: Construir frases</h3>
+            <ol>
+                <li>alto / es / hermano / mi → ______________________.</li>
+            </ol>
+            
+            <button id="toggle-solutions-btn" class="solutions-button">Ver Soluciones</button>
+            
+            <div id="solutions-container">
+                <h3>✅ Soluciones</h3>
+                <h4>Ejercicio 1:</h4>
+                <ol><li>tengo</li><li>tiene</li><li>eres</li><li>está</li></ol>
+                <h4>Ejercicio 2:</h4>
+                <ol><li>Mi hermano es alto.</li></ol>
+            </div>
+        </section>
+
     </main>
-    <footer><p>Lección de Español Interactiva | 2025</p></footer>
+    
+    <footer>
+        <p>Lección de Español Interactiva | 2025</p>
+    </footer>
+
+    <script>
+        const toggleButton = document.getElementById('toggle-solutions-btn');
+        const solutionsContainer = document.getElementById('solutions-container');
+
+        toggleButton.addEventListener('click', () => {
+            const isVisible = solutionsContainer.style.display === 'block';
+            if (isVisible) {
+                solutionsContainer.style.display = 'none';
+                toggleButton.textContent = 'Ver Soluciones';
+            } else {
+                solutionsContainer.style.display = 'block';
+                toggleButton.textContent = 'Ocular Soluciones';
+            }
+        });
+    </script>
+
 </body>
 </html>

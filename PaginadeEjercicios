@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección: Mi Familia | Ejercicios</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header><h1>Lección de Español A1-A2</h1></header>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">🏠 Inicio</a></li>
+            <li><a href="vocabulario.html">📚 Vocabulario</a></li>
+            <li><a href="gramatica.html">💡 Gramática</a></li>
+            <li><a href="ejemplo.html">🖼️ Ejemplo</a></li>
+            <li><a href="ejercicios.html" class="active">✍️ Ejercicios</a></li>
+        </ul>
+    </nav>
+    <main class="container">
+        <section class="card">
+            <h2>✍️ ¡A practicar!</h2>
+            
+            <h3>Ejercicio 1: Completar</h3>
+            <ol>
+                <li>Yo _______ una hermana y dos hermanos.</li>
+                <li>Mi abuela _______ 80 años, pero _______ muy activa.</li>
+                <li>¿Tú _______ de España?</li>
+                <li>Mi padre no _______ en casa ahora.</li>
+                <li>Nosotros _______ muy contentos.</li>
+            </ol>
+            
+            <h3>Ejercicio 3: Construir frases</h3>
+            <ol>
+                <li>alto / es / hermano / mi → ______________________.</li>
+                <li>profesora / es / madre / tu / ? → ¿______________________?</li>
+            </ol>
+            
+            <button id="toggle-solutions-btn" class="solutions-button">Ver Soluciones</button>
+            
+            <div id="solutions-container">
+                <h3>✅ Soluciones</h3>
+                <h4>Ejercicio 1:</h4>
+                <ol><li>tengo</li><li>tiene / es</li><li>eres</li><li>está</li><li>estamos</li></ol>
+                <h4>Ejercicio 3:</h4>
+                <ol><li>Mi hermano es alto.</li><li>¿Tu madre es profesora?</li></ol>
+            </div>
+        </section>
+    </main>
+    <footer><p>Lección de Español Interactiva | 2025</p></footer>
+
+    <script>
+        const toggleButton = document.getElementById('toggle-solutions-btn');
+        const solutionsContainer = document.getElementById('solutions-container');
+        toggleButton.addEventListener('click', () => {
+            const isVisible = solutionsContainer.style.display === 'block';
+            if (isVisible) {
+                solutionsContainer.style.display = 'none';
+                toggleButton.textContent = 'Ver Soluciones';
+            } else {
+                solutionsContainer.style.display = 'block';
+                toggleButton.textContent = 'Ocultar Soluciones';
+            }
+        });
+    </script>
+</body>
+</html>

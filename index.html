@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lección de Español A1-A2: Mi Familia</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
+        /* --- Estilos Generales --- */
         :root {
             --primary-color: #007bff;
             --background-color: #f4f7f9;
@@ -16,136 +19,303 @@
             --border-radius: 8px;
             --box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Lato', Arial, sans-serif; line-height: 1.6; background-color: var(--background-color); color: var(--text-color); font-size: 17px; }
-        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
-        header { background-color: var(--primary-color); color: white; padding: 2rem 1rem; text-align: center; border-bottom-left-radius: var(--border-radius); border-bottom-right-radius: var(--border-radius); }
-        header h1 { font-size: 2.5rem; }
-        main { padding: 20px 0; }
-        section { background-color: var(--card-bg); margin-bottom: 25px; padding: 25px; border-radius: var(--border-radius); box-shadow: var(--box-shadow); }
-        section h2 { color: var(--primary-color); border-bottom: 2px solid var(--primary-color); padding-bottom: 10px; margin-bottom: 20px; font-size: 1.8rem; }
-        h3 { font-size: 1.4rem; margin-top: 25px; margin-bottom: 15px; }
-        .flashcard-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; perspective: 1000px; }
-        .flashcard { background-color: transparent; height: 120px; cursor: pointer; border-radius: var(--border-radius); }
-        .flashcard-inner { position: relative; width: 100%; height: 100%; text-align: center; transition: transform 0.6s; transform-style: preserve-3d; box-shadow: var(--box-shadow); border-radius: var(--border-radius); }
-        .flashcard.is-flipped .flashcard-inner { transform: rotateY(180deg); }
-        .flashcard-front, .flashcard-back { position: absolute; width: 100%; height: 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden; display: flex; justify-content: center; align-items: center; padding: 15px; border-radius: var(--border-radius); font-size: 1.2rem; font-weight: bold; }
-        .flashcard-front { background-color: white; border: 2px solid var(--primary-color); color: var(--primary-color); }
-        .flashcard-back { background-color: var(--primary-color); color: white; transform: rotateY(180deg); }
-        .solutions-button { display: inline-block; background-color: var(--primary-color); color: white; padding: 12px 25px; border: none; border-radius: 5px; cursor: pointer; }
-        #solutions-container { display: none; margin-top: 20px; padding: 20px; background-color: #f8f9fa; border-left: 5px solid var(--primary-color); }
-        footer { text-align: center; padding: 20px; color: #6c757d; }
-        /* Estilos para los nuevos ejercicios */
-        .exercise-list { list-style-position: inside; padding-left: 5px; }
-        .exercise-list li { margin-bottom: 12px; }
-        .matching-table { width: 100%; margin-top: 15px; }
-        .matching-table td { padding: 8px; vertical-align: middle; }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Lato', Arial, sans-serif;
+            line-height: 1.6;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-size: 17px;
+        }
+
+        /* --- Estructura Principal --- */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            border-bottom-left-radius: var(--border-radius);
+            border-bottom-right-radius: var(--border-radius);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        main {
+            padding: 20px 0;
+        }
+
+        /* --- Estilo de Tarjetas para las Secciones --- */
+        section {
+            background-color: var(--card-bg);
+            margin-bottom: 25px;
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+        section h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        h3 {
+            font-size: 1.4rem;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        /* --- NUEVOS ESTILOS PARA LAS FLASHCARDS --- */
+        .flashcard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            perspective: 1000px; /* Perspectiva para el efecto 3D */
+        }
+        
+        .flashcard {
+            background-color: transparent;
+            height: 120px;
+            cursor: pointer;
+            border-radius: var(--border-radius);
+        }
+        
+        .flashcard-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: var(--box-shadow);
+            border-radius: var(--border-radius);
+        }
+        
+        /* Gira la tarjeta cuando se añade la clase .is-flipped */
+        .flashcard.is-flipped .flashcard-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .flashcard-front, .flashcard-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden; /* Safari */
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            border-radius: var(--border-radius);
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        
+        .flashcard-front {
+            background-color: white;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+        
+        .flashcard-back {
+            background-color: var(--primary-color);
+            color: white;
+            transform: rotateY(180deg);
+        }
+        /* --- FIN DE ESTILOS DE FLASHCARDS --- */
+
+        /* --- Elementos Interactivos --- */
+        .solutions-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #solutions-container {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #6c757d;
+        }
     </style>
 </head>
 <body>
+
     <header>
         <h1>Lección de Español A1-A2</h1>
         <p>Mi Familia y las Descripciones</p>
     </header>
+
     <main class="container">
+
         <section id="objetivos">
             <h2>🎯 ¿Qué vamos a aprender hoy?</h2>
-            </section>
+            <ul>
+                <li>A nombrar a los miembros de la familia.</li>
+                <li>A describir personas (físico y carácter).</li>
+                <li>A presentar a tu familia con frases sencillas.</li>
+            </ul>
+        </section>
+
         <section id="vocabulario">
             <h2>📚 Vocabulario: La Familia y los Adjetivos</h2>
-            </section>
+            <p>Haz clic en cada tarjeta para ver la traducción.</p>
+            
+            <h3>1. Miembros de la Familia</h3>
+            <div class="flashcard-grid">
+                <div class="flashcard">
+                    <div class="flashcard-inner">
+                        <div class="flashcard-front">El padre</div>
+                        <div class="flashcard-back">(The father)</div>
+                    </div>
+                </div>
+                <div class="flashcard">
+                    <div class="flashcard-inner">
+                        <div class="flashcard-front">La madre</div>
+                        <div class="flashcard-back">(The mother)</div>
+                    </div>
+                </div>
+                <div class="flashcard">
+                    <div class="flashcard-inner">
+                        <div class="flashcard-front">El hermano</div>
+                        <div class="flashcard-back">(The brother)</div>
+                    </div>
+                </div>
+                <div class="flashcard">
+                    <div class="flashcard-inner">
+                        <div class="flashcard-front">La hermana</div>
+                        <div class="flashcard-back">(The sister)</div>
+                    </div>
+                </div>
+                <div class="flashcard">
+                    <div class="flashcard-inner">
+                        <div class="flashcard-front">El abuelo</div>
+                        <div class="flashcard-back">(The grandfather)</div>
+                    </div>
+                </div>
+                <div class="flashcard">
+                    <div class="flashcard-inner">
+                        <div class="flashcard-front">La abuela</div>
+                        <div class="flashcard-back">(The grandmother)</div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>2. Adjetivos para Describir Personas</h3>
+            <div class="flashcard-grid">
+                <div class="flashcard">
+                    <div class="flashcard-inner">
+                        <div class="flashcard-front">Alto / Alta</div>
+                        <div class="flashcard-back">(Tall)</div>
+                    </div>
+                </div>
+                <div class="flashcard">
+                    <div class="flashcard-inner">
+                        <div class="flashcard-front">Bajo / Baja</div>
+                        <div class="flashcard-back">(Short)</div>
+                    </div>
+                </div>
+                <div class="flashcard">
+                    <div class="flashcard-inner">
+                        <div class="flashcard-front">Joven</div>
+                        <div class="flashcard-back">(Young)</div>
+                    </div>
+                </div>
+                <div class="flashcard">
+                    <div class="flashcard-inner">
+                        <div class="flashcard-front">Simpático/a</div>
+                        <div class="flashcard-back">(Nice, friendly)</div>
+                    </div>
+                </div>
+                 <div class="flashcard">
+                    <div class="flashcard-inner">
+                        <div class="flashcard-front">Inteligente</div>
+                        <div class="flashcard-back">(Intelligent)</div>
+                    </div>
+                </div>
+                 <div class="flashcard">
+                    <div class="flashcard-inner">
+                        <div class="flashcard-front">Divertido/a</div>
+                        <div class="flashcard-back">(Fun)</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <section id="gramatica">
             <h2>💡 Gramática Esencial</h2>
-            </section>
+            <p><strong>SER</strong> para descripciones permanentes. <strong>ESTAR</strong> para estados y localización.</p>
+        </section>
+        
         <section id="ejemplo">
             <h2>🖼️ Ejemplo: Presentando a mi familia</h2>
-            </section>
+            <p>Hola, esta es <strong>mi</strong> familia. <strong>Mi</strong> madre se llama Elena y <strong>es</strong> profesora.</p>
+        </section>
         
         <section id="ejercicios">
             <h2>✍️ ¡A practicar!</h2>
-            
-            <h3>Ejercicio 1: Completar</h3>
-            <p>Escribe la forma correcta del verbo <strong>ser</strong>, <strong>estar</strong> o <strong>tener</strong>.</p>
-            <ol class="exercise-list">
-                <li>Yo ______ una hermana.</li>
-                <li>Mi abuela ______ 80 años.</li>
-                <li>¿Tú ______ de España?</li>
-                <li>Mi padre no ______ en casa ahora.</li>
-                <li>Mis hermanos ______ estudiantes.</li>
-            </ol>
-
-            <h3>Ejercicio 2: Construir frases</h3>
-            <p>Ordena las palabras para formar una frase correcta.</p>
-            <ol class="exercise-list">
-                <li>alto / es / hermano / mi → ______________________.</li>
-                <li>pelo / mi / tiene / hermana / largo / el → ______________________.</li>
-            </ol>
-
-            <h3>Ejercicio 3: Relacionar</h3>
-            <p>Une cada persona con su descripción correcta.</p>
-            <table class="matching-table">
-                <tr>
-                    <td>1. Mi padre</td>
-                    <td>A. es joven y divertida.</td>
-                </tr>
-                <tr>
-                    <td>2. Mi hermana</td>
-                    <td>B. son mayores y amables.</td>
-                </tr>
-                <tr>
-                    <td>3. Mis abuelos</td>
-                    <td>C. es alto y tiene 50 años.</td>
-                </tr>
-            </table>
-
-            <h3>Ejercicio 4: Elige la opción correcta</h3>
-            <p>Selecciona el verbo correcto para cada frase.</p>
-            <ol class="exercise-list">
-                <li>Mi madre (es / está) en la cocina.</li>
-                <li>Yo (soy / estoy) un poco cansado hoy.</li>
-                <li>Ellos (son / están) de Argentina.</li>
-            </ol>
-            
+            <p>1. Yo _______ una hermana.</p>
             <button id="toggle-solutions-btn" class="solutions-button">Ver Soluciones</button>
-            
             <div id="solutions-container">
                 <h3>✅ Soluciones</h3>
-                
-                <h4>Ejercicio 1: Completar</h4>
-                <ol><li>tengo</li><li>tiene</li><li>eres</li><li>está</li><li>son</li></ol>
-                
-                <h4>Ejercicio 2: Construir frases</h4>
-                <ol><li>Mi hermano es alto.</li><li>Mi hermana tiene el pelo largo.</li></ol>
-
-                <h4>Ejercicio 3: Relacionar</h4>
-                <p>1 → C, &nbsp; 2 → A, &nbsp; 3 → B</p>
-
-                <h4>Ejercicio 4: Elige la opción correcta</h4>
-                <ol><li>está</li><li>estoy</li><li>son</li></ol>
+                <p>1. tengo</p>
             </div>
         </section>
+
     </main>
+    
     <footer>
         <p>Lección de Español Interactiva | 2025</p>
     </footer>
 
     <script>
-        // Lógica para el botón de soluciones (sin cambios)
+        // Lógica para el botón de soluciones
         const toggleButton = document.getElementById('toggle-solutions-btn');
         const solutionsContainer = document.getElementById('solutions-container');
         toggleButton.addEventListener('click', () => {
-            const isVisible = solutionsContainer.style.display === 'block';
+            const isVisible = solutions-container.style.display === 'block';
             solutionsContainer.style.display = isVisible ? 'none' : 'block';
             toggleButton.textContent = isVisible ? 'Ver Soluciones' : 'Ocultar Soluciones';
         });
 
-        // Lógica para las flashcards (sin cambios)
+        // NUEVO JAVASCRIPT PARA LAS FLASHCARDS
+        // 1. Seleccionar todas las tarjetas
         const flashcards = document.querySelectorAll('.flashcard');
+        
+        // 2. Añadir un evento de clic a cada una
         flashcards.forEach(card => {
             card.addEventListener('click', () => {
+                // 3. Al hacer clic, se añade o quita la clase 'is-flipped'
                 card.classList.toggle('is-flipped');
             });
         });
     </script>
+
 </body>
 </html>
